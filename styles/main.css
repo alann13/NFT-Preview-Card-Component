@@ -1,3 +1,136 @@
 :root {
+  --very-dark-blue: #0d192c;
+  --dark-blue: #15263f;
+  --blue: #2e405a;
+  --cyan: #00fff8;
   --light-color: white;
+  --soft-blue: #8bacd9;
+
+  font-family: 'Outfit', sans-serif;
+}
+
+.page-cover {
+  align-items: center;
+  background-color: var(--very-dark-blue);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+h1 {
+  color: var(--light-color);
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+h1:hover,
+.card-creator span:hover {
+  color: var(--cyan);
+}
+
+.preview-card {
+  --card-default-font-size: 1rem;
+  --card-default-text-color: var(--soft-blue);
+  background-color: var(--dark-blue);
+  border-radius: 15px;
+  color: var(--card-default-text-color);
+  font-size: var(--card-default-font-size);
+  max-width: 21.875rem;
+  padding: 1.5rem;
+}
+
+.preview-card > * + * {
+  margin-top: 1.5rem;
+}
+
+.preview-image-box {
+  border-radius: 8px;
+  position: relative;
+}
+
+.preview-image {
+  border-radius: inherit;
+}
+
+.preview-icon {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+.preview-image-box:hover {
+  background: var(--cyan);
+}
+
+.preview-image-box:hover .preview-image {
+  opacity: 0.5;
+}
+
+.preview-image-box:hover .preview-icon {
+  visibility: visible;
+}
+
+.preview-card > p {
+  font-size: 1.1125rem;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-text-box {
+  display: flex;
+  flex-basis: 50%;
+  line-height: 1.25;
+}
+
+.info-text-box img {
+  margin-right: 0.5rem;
+}
+
+.info-text-box:first-child {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.info-text-box:last-child {
+  justify-content: end;
+}
+
+.card-creator {
+  align-items: center;
+  border-top: 1px solid var(--blue);
+  display: flex;
+  line-height: 1.25;
+  padding-top: 1rem;
+}
+
+.card-creator img {
+  border: 1px solid var(--light-color);
+  border-radius: 50%;
+  height: 2rem;
+  margin-right: 1rem;
+  width: 2rem;
+}
+
+.card-creator span {
+  color: var(--light-color);
+}
+
+@media screen and (max-width: 25rem) {
+  .preview-card {
+    max-width: 20rem;
+  }
+
+  .preview-image {
+    height: 17.375rem;
+    width: 17.375rem;
+  }
 }
